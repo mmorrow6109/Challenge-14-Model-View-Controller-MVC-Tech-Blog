@@ -1,13 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
+    <title>Tech Blog</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
-    {{{body}}}
-    <script src="/js/main.js"></script>
+    <header>
+        <h1>Tech Blog</h1>
+        <nav>
+            {{#if loggedIn}}
+            <ul>
+                <li><class="button" a href="/">Home</class=a></li>
+                <li><class="button" a href="/dashboard">Dashboard</class=></li>
+                <li><class="button" a href="/login">Login</class=></li>
+                <li><class="button" a href="/signup">Sign Up</class=></li>
+                <li><button id="logout" class="button is-danger">Logout</button>
+            </ul>
+            {{/if}}
+        </nav>
+
+    </header>
+    <main>
+        {{{body}}}
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tech Blog</p>
+    </footer>
+
+    {{#if loggedIn}}
+    <script src='/javascript/logout.js'></script>
+    {{/if}}
 </body>
+
 </html>

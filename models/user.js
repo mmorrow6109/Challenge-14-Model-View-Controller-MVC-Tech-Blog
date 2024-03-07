@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/database');
+const sequelize = require('../config/connection');
 const bcrypt = require('bcrypt'); // bcyrpt is a password hashing library
 
 class User extends Model {

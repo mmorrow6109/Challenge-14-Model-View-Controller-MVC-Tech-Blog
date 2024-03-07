@@ -1,4 +1,7 @@
 const express = require('express');
+const { create } = require('express-handlebars');
+const { join } = require('path');
+const { Store } = require('express-session');
 const sequelize = require('./config/connection');
 const routes = require('./controllers');
 const helpers = require('./utils/helpers');
@@ -30,7 +33,7 @@ const sess = {
 app.use(require('express-session')(sess)); //add the session object to our app
 app.use(express.json()); //parse incoming JSON data
 app.use(express.urlencoded({ extended: true })); //parse incoming form data
-app.use(express.static(path.join(__dirname, 'public'))); //serve the files in the public directory
+app.use(express.static(join(__dirname, 'public'))); //serve the files in the public directory
 
 app.engine('handlebars', create({ helpers }).engine); //create a new Handlebars.js engine instance with custom helper functions
 app.set('view engine', 'handlebars'); //inform the Express.js server that it should use the Handlebars.js template engine

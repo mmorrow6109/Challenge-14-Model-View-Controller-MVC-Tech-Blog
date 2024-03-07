@@ -1,4 +1,19 @@
 {
+  "name": "module-14-challenge",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1",
+      "start": "node server.js",
+      "watch": "nodemon server.js",
+      "seed": "node seeds/index.js"
+    },
+    "repository":{
+      "type": "git",
+      "url": "https://github.com/mmorrow6109/Challenge-14-Model-View-Controller-MVC-Tech-Blog"
+    },
+
     "dependencies": {
       "bcrypt": "^5.1.1",
       "connect-session-sequelize": "^7.1.7",
