@@ -33,4 +33,4 @@ async function loginFormHandler(event) {
   
   // Add an event listener to the form with the class 'login-form'
   // When the form is submitted, the loginFormHandler function will be called
-  document.querySelector('#login').addEventListener('submit', loginFormHandler);
+  document.querySelector('#login-form').addEventListener('submit', loginFormHandler);

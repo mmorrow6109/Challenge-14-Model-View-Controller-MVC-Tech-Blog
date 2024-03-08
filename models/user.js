@@ -30,7 +30,7 @@ User.init(
         password: {
             type: DataTypes.STRING,
             validate: {
-                len: [4] // passwords must be at least four characters long
+                len: [8] // passwords must be at least four characters long
             }
         }
     },

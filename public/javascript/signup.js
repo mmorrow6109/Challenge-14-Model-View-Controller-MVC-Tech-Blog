@@ -18,6 +18,7 @@ async function signupFormHandler(event) {
         body: JSON.stringify({
           username, // Include the username in the request body
           email, // Include the email in the request body
+          password // Include the password in the request body
         }),
         headers: {
           'Content-Type': 'application/json' // Specify the content type in the request headers
@@ -39,4 +40,4 @@ async function signupFormHandler(event) {
   
   // Add an event listener to the form with the class 'signup-form'
   // When the form is submitted, the signupFormHandler function will be called
-  document.querySelector('#signup').addEventListener('submit', signupFormHandler);
+  document.querySelector('#signup-form').addEventListener('submit', signupFormHandler);
