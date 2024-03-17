@@ -9,23 +9,21 @@
 </head>
 
 <body>
-    <header>
-        <h1>Tech Blog</h1>
-        <nav>
-            {{#if loggedIn}}
-            <ul>
-                <li><class="button" a href="/">Home</class=a></li>
-                <li><class="button" a href="/dashboard">Dashboard</class=></li>
-                <li><class="button" a href="/login">Login</class=></li>
-                <li><class="button" a href="/signup">Sign Up</class=></li>
-                <li><button id="logout" class="button is-danger">Logout</button>
-            </ul>
-            {{/if}}
-        </nav>
-
+   <header class="header">
+        <div class="container">
+            <h1>Tech Blog</h1>
+            <nav class="navbar">
+                <ul>
+                    <li><button> <a href="/">Home</button></li>
+                    <li><button> <a href="/login">Login</button></li>
+                    <li><button> <a href="/signup">Sign Up</button></li>
+                    <li><button id="logout" class="button is-danger">Logout</button>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
-        {{{body}}} <!-- everything from the other Handlebars pages witll go here -->
+        {{{body}}} <!-- everything from the other Handlebars pages will go here -->
     </main>
 
     <footer>

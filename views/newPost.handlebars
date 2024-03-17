@@ -1,0 +1,21 @@
+<body>
+    <h1>{{post.title}}</h1>
+    <p>{{post.body}}</p>
+    <p>Author: {{post.author}}</p>
+    <h2>Comments</h2>
+    <ul>
+        {{#each comments}}
+        <li>
+            <p>{{this.text}}</p>
+            <p>By: {{this.author}}</p>
+            <a href="/post/{{../post.id}}/comment/{{this.id}}/edit">Edit</a>
+            <a href="/post/{{../post.id}}/comment/{{this.id}}/delete">Delete</a>
+        </li>
+        {{/each}}
+    </ul>
+    <form action="/post/{{post.id}}/comment" method="POST">
+        <label for="comment">Add a Comment:</label>
+        <textarea id="comment" name="comment" required></textarea><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>

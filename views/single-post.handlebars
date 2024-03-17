@@ -1,0 +1,16 @@
+{{if loggedIn}}
+  <div class="single-post">
+    <h1>{{title}}</h1>
+    <p>{{content}}</p>
+  </div>
+  <form class="comment-form">
+    <input type="hidden" name="post-id" value="{{id}}">
+    <textarea class="commentText" name="comment-body"></textarea>
+    <button class="button" type="submit">Add comment</button>
+{{else}}
+  <div class="single-post">
+    <h1>Log in to view this post</h1>
+  </div>
+{{/if}}
+
+<script src="/public/javascript/comment.js"> </script>

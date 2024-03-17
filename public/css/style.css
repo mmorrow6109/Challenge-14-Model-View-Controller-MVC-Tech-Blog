@@ -3,6 +3,7 @@ body {
     background-color: #f2f2f2;
     margin: 0;
     padding: 0;
+    color: black;
 }
 
 .container {
@@ -25,6 +26,7 @@ h2 {
     font-size: 24px;
     text-align: center;
     margin-bottom: 20px;
+    color: black;
 }
 
 .input-group {
@@ -64,4 +66,27 @@ button {
 
 button:hover {
     background-color: #555;
+}
+
+.comment-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comment-text {
+    background-color: #000000;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    width: 300px;
+}
+
+.comment-text{
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
 }

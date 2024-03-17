@@ -1,0 +1,17 @@
+<article>
+    <a href="/dashboard" class="updateDeletePost">Return to Dashboard</a>
+    <h2>Edit Post</h2>
+    <form class="editPostForm">
+        <label for="post-title">Post title:</label>
+        <input class="input" name="post-title" type="text" value="{{post.title}}" />
+        <label for="post-content">Post content:</label>
+        <input class="commentText" name="post-content" type="text" value="{{post.post_content}}" />
+        <div class="createdBy">
+            created by you on {{format_date post.created_at}} | <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
+        </div>
+        <button type="submit" class="button">save post</button>
+        <button type="button" class="buttonDelete">Delete this post</button>
+    </form>
+</article>
+
+<script src="/public/javascript/updateDelete.js"></script>
